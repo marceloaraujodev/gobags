@@ -1,0 +1,20 @@
+.cont{
+  border: 1px solid red;
+  height: 700px;
+}
+
+.imgs{
+  width: 100vw;
+  height: 650px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .cont{
+    height: 300px;
+  }
+  
+  .imgs{
+    height: 300px;
+  }
+}

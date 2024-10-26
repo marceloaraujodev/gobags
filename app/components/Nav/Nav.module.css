@@ -1,0 +1,103 @@
+.cont{
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.425);
+  height: 100px;
+  position: fixed;
+  z-index: 1000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 8px rgba(0, 0 , 0, 0.5);
+}
+.wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* border: 2px solid red; */
+}
+.innerCont{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  max-width: 1440px;
+  flex-grow: 1;
+  padding: 0 10px;
+}
+.menuIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+.menu{
+  /* width: 350px;
+  height: 350px; */
+  background-color: rgba(250, 235, 215, 0.877);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+  padding-top: 100px;
+}
+.menuSmall {
+  width: 100vw;
+}
+.closeIcon{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+}
+.ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  list-style-type: none;
+}
+.ul li{
+  border-bottom: none;
+}
+.ul li:last-child{
+  border-bottom: 1px solid black;
+}
+
+.menuItems{
+  font-weight: bold;
+  text-align: right;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 15px;
+  width: 300px;
+  text-decoration: none;
+  
+}
+.logo{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.icons{
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+  .ul{
+    padding-top: 80px;
+  }
+  .iconsItem{
+    width: 20px;
+  }
+}
