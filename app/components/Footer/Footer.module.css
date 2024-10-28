@@ -1,4 +1,96 @@
 .cont{
   width: 100%;
-  border: 1px solid green;
+  background-color: black;
+  color: white;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+.contato{
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+.wrapper{
+  /* height: 300px; */
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  /* max-width: 1200px; */
+  padding: 20px;
+}
+
+.icons{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+}
+.iconCont{
+  /* border: 1px solid white; */
+  width: 300px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 15px;
+}
+.iconItem{
+  font-size: 23px;
+}
+.divider{
+  border-left: 1px solid white;
+  height: 200px
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form label{
+  display: flex;
+  flex-direction: column;
+}
+.form label input,
+.form label textarea{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+.name{
+  display: flex;
+  justify-content: space-between;
+}
+.form button{
+  padding: 10px 40px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper{
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+  .name{
+    display: flex;
+    flex-direction: column;
+  }
 }

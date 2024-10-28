@@ -33,16 +33,16 @@ export default function CarouselImgs() {
       className="mySwiper"
       >
       <SwiperSlide>
-        <img className={c.imgs} src="/detalhefrente.jpg" />
+        <img className={c.imgs} src="/blackb.webp" />
       </SwiperSlide>
       <SwiperSlide>
-        <img className={c.imgs} src="/detailyellow.jpg" />
+        <img className={c.imgs} src="/blueb.webp" />
       </SwiperSlide>
       <SwiperSlide>
-        <img className={c.imgs} src="/detailwhite.jpg" />
+        <img className={c.imgs} src="/orange.webp" />
       </SwiperSlide>
       <SwiperSlide>
-        <img className={c.imgs} src="/detalheverde.jpg" />
+        <img className={c.imgs} src="/whiteb.webp" />
       </SwiperSlide>
     </Swiper>
 
