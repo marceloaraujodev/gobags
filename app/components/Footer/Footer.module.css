@@ -29,7 +29,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   font-size: 20px;
 }
 .iconCont{
@@ -39,10 +39,10 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  font-size: 15px;
+  font-size: .9rem;
 }
 .iconItem{
-  font-size: 23px;
+  font-size: 20px;
 }
 .divider{
   border-left: 1px solid white;
@@ -70,6 +70,7 @@
 .name{
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 .form button{
   padding: 10px 40px;

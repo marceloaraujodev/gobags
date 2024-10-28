@@ -1,12 +1,47 @@
-import { FaPhoneAlt } from "react-icons/fa";
-import { MdOutlineMailOutline } from "react-icons/md";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
-import { FaLocationDot } from "react-icons/fa6";
+'use client';
+import { useState } from 'react';
+import axios from 'axios';
+import { FaPhoneAlt } from 'react-icons/fa';
+import { MdOutlineMailOutline } from 'react-icons/md';
+import { FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa6';
+import { FaLocationDot } from 'react-icons/fa6';
 
-import c from "./Footer.module.css";
+import c from './Footer.module.css';
 
 export default function Footer() {
+  const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    console.log('click');
+    const contactForm = {
+      name,
+      lastName,
+      email,
+      message,
+    }
+
+    // console.log(contactForm);
+
+    // change url for message route url
+    // const res = await axios.post('/contact', contactForm);
+    // const res = {status: 200};
+
+    if (res.status === 200) {
+      alert('Mensagem enviada com sucesso!');
+      setName('');
+      setLastName('');
+      setEmail('');
+      setMessage('');
+    } else {
+      alert('Ocorreu um erro ao enviar a mensagem!');
+    }
+  }
+
   return (
     <div className={c.cont}>
       <p className={c.contato}>Contato</p>
@@ -28,33 +63,51 @@ export default function Footer() {
             <div>
               <FaLocationDot className={c.iconItem} />
             </div>
-            <div>Rua Diogo Moreira, 132, Conj. 1010, Pinheiros, São Paulo, SP, Brasil, CEP 05423 010</div>
+            <div>
+              Rua Diogo Moreira, 132, Conj. 1010, Pinheiros, São Paulo, SP,
+              Brasil, CEP 05423 010
+            </div>
           </div>
         </div>
         {/* <div className={c.divider}></div> */}
-        <div className={c.form}>
+        <form className={c.form} onSubmit={handleSubmit}>
           <div className={c.name}>
             <label>
               Nome:
-              <input type="text" />
+              <input
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                type="text"
+              />
             </label>
             <label>
               Sobrenome:
-              <input type="text" />
+              <input
+                onChange={(e) => setLastName(e.target.value)}
+                value={lastName}
+                type="text"
+              />
             </label>
           </div>
           <label>
             E-mail:
-            <input type="text" />
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              type="text"
+            />
           </label>
           <label>
             Mensagem:
-            <textarea placeholder="Mensagem"></textarea>
+            <textarea
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
+              placeholder="Mensagem"></textarea>
           </label>
           <label>
             <button type="submit">Enviar</button>
           </label>
-        </div>
+        </form>
       </div>
     </div>
   );
