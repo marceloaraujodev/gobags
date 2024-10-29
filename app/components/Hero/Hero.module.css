@@ -12,6 +12,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-color: rgb(228, 228, 228);
+  border-radius: 10px;
+  padding: 40px;
 }
 .contLeft h2{
   font-size: 3.7rem;
@@ -47,6 +50,7 @@
 @media screen and (max-width:904px){
   .cont{
     flex-direction: column;
+    padding: 50px 15px;
   }
   .contLeft{
     width: 95%;

@@ -94,10 +94,15 @@
 }
 .icons{
   display: flex;
-  gap: 5px;
+  gap: 10px;
   cursor: pointer;
 }
-
+.icons a {
+  color: black;
+}
+.icons a:hover{
+  color: black
+}
 @media screen and (max-width: 768px){
   .ul{
     padding-top: 80px;

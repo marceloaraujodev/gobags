@@ -1,6 +1,6 @@
 import c from "./Modal.module.css";
 
-export default function Modal({ children, isOpen, onClose }) {
+export default function Modal({ children, isOpen, onClose, additionalClass }) {
   if (!isOpen) return null;
 
   return (
@@ -9,10 +9,14 @@ export default function Modal({ children, isOpen, onClose }) {
         <button className={c.closeBtn} onClick={onClose}>
           X
         </button>
-        {/* <div className={c.modalContent}> */}
+        <div className={c.wrapper}>
+        <div className={c.title}>GoBags <span>Materiais</span></div>
+        <div className={c.modalContent}>
         {children}
-        {/* </div> */}
+        </div>
+        </div>
       </div>
     </div>
+
   );
 }

@@ -5,6 +5,7 @@ import CarouselImgs from "./components/CarouselImgs/CarouselImgs";
 import Hero from "./components/Hero/Hero";
 import Process from "./components/Process/Process";
 import Marcas from "./components/Marcas/Marcas";
+import PrivateLabel from "./components/PrivateLabel/PrivateLabel";
 import c from "./page.module.css";
 
 export default function Home() {
@@ -18,16 +19,16 @@ export default function Home() {
       
     >{content}</Modal>
     <div className={c.pageCont}>
-      <div className={c.carouselCont}>
+      {/* <div className={c.carouselCont}>
         <CarouselImgs />
-        
       </div>
-        <Hero />
+        <Hero /> */}
         <Process isModalOpen={isModalOpen} 
         setIsModalOpen={setIsModalOpen} 
         setContent={setContent}
         />
-        <Marcas />
+        {/* <Marcas />
+        <PrivateLabel /> */}
     </div>
     </>
   );

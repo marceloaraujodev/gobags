@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { useAnimation } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
 import Modal from '../../components/Modal/Modal.jsx';
 import "rsuite/dist/rsuite.css";
 import c from "./Process.module.css";
@@ -10,11 +9,11 @@ export default function Process({setIsModalOpen, setContent}) {
 
 
   const images = [
-    { src: "/grid-img-1.webp", text: "Desing", img: <img  src='/design.webp'/> },
-    { src: "/grid-img-2.webp", text: "Materiais"},
-    { src: "/grid-img-3.webp", text: "Cores"},
-    { src: "/grid-img-4.webp", text: "Ferragens e Detalhes"},
-    { src: "/grid-img-5.webp", text: "Acabamento"}
+    { src: "/grid-img-1.webp", text: "Desing", description: 'Da imaginação até a elaboração da peça piloto, nossa equipe de design cuida dos mínimos detalhes de cada peça. Clique nas fotos para conhecer um pouco mais sobre o nosso processo de Design.', modalImgs: ['/design.webp', '/design.webp','/design.webp','/design.webp','/design.webp','/design.webp',] },
+    { src: "/grid-img-2.webp", text: "Materiais", description: 'Na indústria da moda os materiais são a alma de qualquer produto. A GO Bags só trabalha com materiais que atendem aos mais rigorosos padrões internacionais de qualidade, a começar pelos couros. Temos uma ampla gama de materiais que permitem a composição de coleções que vão das mais clássicas às mais arrojadas. Clique nas fotos para conhecer um pouco mais sobre os materiais que utilizamos.', modalImgs: ['/design.webp', '/design.webp','/design.webp','/design.webp','/design.webp','/design.webp'] },
+    { src: "/grid-img-3.webp", text: "Cores", modalImgs: '/design.webp' },
+    { src: "/grid-img-4.webp", text: "Ferragens e Detalhes", modalImgs:'/design.webp' },
+    { src: "/grid-img-5.webp", text: "Acabamento", modalImgs: '/design.webp' }
   ];
 
   // function openModal(index) {
@@ -31,9 +30,9 @@ export default function Process({setIsModalOpen, setContent}) {
         <div className={c.imgCont}>
           {images.map((image, index) => {
             // create separate controles for each image
-            const overlayAnimation = useAnimation();
-            const imgBlurAnimation = useAnimation();
-            const textAnimation = useAnimation();
+            const overlayAnimation = useAnimationControls();
+            const imgBlurAnimation = useAnimationControls();
+            const textAnimation = useAnimationControls();
 
             // create separate animations for each image
             const handleHoverStart = () => {
@@ -45,12 +44,17 @@ export default function Process({setIsModalOpen, setContent}) {
             const handleHoverEnd = () => {
               textAnimation.start({ opacity: 0 });
               imgBlurAnimation.start({ filter: "blur(0px)" });
-              overlayAnimation.start({ y: "80%", opacity: 0 });
+              overlayAnimation.start({ y: "100%", opacity: 0 });
             };
 
             return (
               // for a link wrappe the whole thing
-              <motion.div key={index} onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={c.img}>
+              <motion.div 
+                key={index} 
+                onMouseEnter={handleHoverStart} 
+                onMouseLeave={handleHoverEnd} 
+                className={c.img}
+              >
                 <motion.img
                   src={image.src}
                   alt={`image grid ${index + 1}`}
@@ -74,8 +78,17 @@ export default function Process({setIsModalOpen, setContent}) {
                     transition={{ duration: 0.3, delay: 0.5 }} // delay for the text
                     onClick={() => {
                       setIsModalOpen(true)
-                      setContent(image.img)
-                      console.log(image.text)
+                      setContent(
+                        <>
+                        {image.modalImgs.map((image, index) => {
+                          return <div className={c.modalDiv} key={index}>
+                            <img src={image} alt={`image ${index + 1}`} />
+                          </div>
+                        })}
+                        <p>{image.description}</p>
+                        </>
+                      ) 
+                      
                     }}
                     >
                     {image.text}

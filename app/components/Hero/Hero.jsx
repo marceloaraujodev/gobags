@@ -2,10 +2,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import contactUs from '../../utils/whatsapp';	
 import c from './Hero.module.css';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
+
 
 export default function Hero() {
   return (
@@ -20,7 +22,7 @@ export default function Hero() {
           produtos com acabamento de alto valor agregado ao unir a técnica
           artesanal, tecnologia e equipamentos produtivos de última geração.
         </p>
-        <button>Fale conosco</button>
+        <button onClick={contactUs}>Fale conosco</button>
       </div>
       <div className={c.contRight}>
         <Swiper

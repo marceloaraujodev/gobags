@@ -1,0 +1,35 @@
+.cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.cont p{
+  max-height: 440px;
+  max-width: 600px;
+  font-weight: bold;
+  font-size: 1.18rem;
+  padding: 20px 10px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 20px;
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .cont {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 50px 0;
+  }
+  .cont img{
+    margin-left: -10px;
+    width: 100%;
+  }
+  .cont p{
+    margin: 15px;
+    margin-top: 45px;
+  }
+}

@@ -6,6 +6,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import contactUs from "@/app/utils/whatsapp";
 import c from "./Nav.module.css";
 
 export default function Nav() {
@@ -76,8 +77,8 @@ export default function Nav() {
 
           <div>
             <div className={c.icons}>
-              <FaWhatsapp className={c.iconsItem} size={25} />
-              <FaInstagram className={c.iconsItem} size={25} />
+              <FaWhatsapp onClick={contactUs} className={c.iconsItem} size={25} />
+              <a href="https://www.instagram.com/gobags.br/" target="_blank"><FaInstagram className={c.iconsItem} size={25} /></a>
               <FaShoppingCart className={c.iconsItem} size={25} />
             </div>
           </div>

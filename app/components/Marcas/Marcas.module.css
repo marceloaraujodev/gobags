@@ -1,18 +1,87 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: gray;
-
+  flex-wrap: wrap;
+  background-color: rgb(231, 230, 230);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  /* border: 4px solid rgb(124, 57, 1); */
+  box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.7);
+  margin-bottom: 100px;
 }
-.marcas{
+.marcas {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 15px;
   justify-content: center;
-  align-items: center;
-
+  align-items: stretch;
 }
-.marcas img{
+.img {
   max-height: 639px;
-  height: 300px;
+  height: 600px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.effect {
+  position: absolute;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(215, 221, 250, 0.24);
+}
+
+.text .title,
+.text p {
+  color: white;
+  font-size: 18px;
+  padding: 0px 15px;
+}
+.title {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.rightBox {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  min-height: 100%;
+}
+.rightBox h2 {
+  font-size: 6rem;
+  font-weight: bolder;
+  color: rgb(77, 77, 77);
+  line-height: .8;
+}
+.rightBox p{
+  padding: 25px 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(104, 104, 104);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+    box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 0;
+    margin-bottom: 50px;
+  }
+  .img {
+    height: 500px;
+    max-height: 500px;
+  }
+  .text .title,
+  .text p {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
 }
