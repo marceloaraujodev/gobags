@@ -1,0 +1,39 @@
+.cont{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+}
+.closeBtn{
+  color: rgb(255, 255, 255);
+  z-index: 5002;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  font-size: 2rem;
+  background-color: transparent;
+}
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 5px;
+  height: 500px;
+  width: 400px;
+  z-index: 1000;
+}
+.modal img{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin-right: 5px;
+}

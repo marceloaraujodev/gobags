@@ -1,0 +1,18 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+
+}
+.marcas{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+}
+.marcas img{
+  max-height: 639px;
+  height: 300px;
+}

@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { MdOutlineMailOutline } from 'react-icons/md';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -28,7 +28,7 @@ export default function Footer() {
     // console.log(contactForm);
 
     // change url for message route url
-    // const res = await axios.post('/contact', contactForm);
+    const res = await axios.post('/contact', contactForm);
     // const res = {status: 200};
 
     if (res.status === 200) {

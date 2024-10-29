@@ -19,6 +19,11 @@
   column-gap: 15px;
   gap: 15px;
 }
+
+.modalCont{
+  position: relative;
+}
+
 .img{
   width: 100%;
   height: 100%;
@@ -30,12 +35,21 @@
 }
 .effect {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(215, 221, 250, 0.24);
-  
+}
+.overlayText{
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
 }
 .img img {
   width: 100%;
