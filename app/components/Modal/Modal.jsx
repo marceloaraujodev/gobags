@@ -1,6 +1,6 @@
 import c from "./Modal.module.css";
 
-export default function Modal({ children, isOpen, onClose, additionalClass }) {
+export default function Modal({ children, isOpen, onClose, modalCategory }) {
   if (!isOpen) return null;
 
   return (
@@ -10,7 +10,7 @@ export default function Modal({ children, isOpen, onClose, additionalClass }) {
           X
         </button>
         <div className={c.wrapper}>
-        <div className={c.title}>GoBags <span>Materiais</span></div>
+        <div className={c.title}>GoBags <span className={c.category}>{modalCategory}</span></div>
         <div className={c.modalContent}>
         {children}
         </div>

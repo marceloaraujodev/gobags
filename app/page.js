@@ -11,12 +11,14 @@ import c from "./page.module.css";
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [content, setContent] = useState(""); 
+  const [modalCategory, setModalCategory] = useState(""); // material, color, design
+
   return (
     <>
     <Modal
       isOpen={isModalOpen}
       onClose={() => setIsModalOpen(false)}
-      
+      modalCategory={modalCategory}
     >{content}</Modal>
     <div className={c.pageCont}>
       {/* <div className={c.carouselCont}>
@@ -26,6 +28,7 @@ export default function Home() {
         <Process isModalOpen={isModalOpen} 
         setIsModalOpen={setIsModalOpen} 
         setContent={setContent}
+        setModalCategory={setModalCategory}
         />
         {/* <Marcas />
         <PrivateLabel /> */}
