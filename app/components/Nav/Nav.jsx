@@ -52,12 +52,12 @@ export default function Nav() {
           {isMenuOpen && (
             <>
               <ul className={c.ul}>
-                <li className={c.menuItems}>O que é Go Bags</li>
-                <li className={c.menuItems}>Nosso Processo</li>
-                <li className={c.menuItems}>Videos</li>
-                <li className={c.menuItems}>Nossas Marcas</li>
-                <li className={c.menuItems}>Private Label</li>
-                <li className={c.menuItems}>Contato</li>
+                <li className={c.menuItems}><a onClick={() => setIsMenuOpen(false)} href="#gobags">O que é Go Bags</a></li>
+                <li className={c.menuItems}><a onClick={() => setIsMenuOpen(false)} href="#process">Nosso Processo</a></li>
+                <li className={c.menuItems}><a onClick={() => setIsMenuOpen(false)} href="#videos">Videos</a></li>
+                <li className={c.menuItems}><a onClick={() => setIsMenuOpen(false)} href="#marcas">Nossas Marcas</a></li>
+                <li className={c.menuItems}><a onClick={() => setIsMenuOpen(false)} href="#privatelabel">Private Label</a></li>
+                <li className={c.menuItems}><a onClick={() => setIsMenuOpen(false)} href="#contato">Contato</a></li>
               </ul>
             </>
           )}

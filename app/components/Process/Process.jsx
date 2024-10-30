@@ -79,7 +79,7 @@ export default function Process({ setIsModalOpen, setContent, setModalCategory }
 
 
   return (
-    <div className={c.cont}>
+    <div className={c.cont} id="process">
       {/* <Modal /> */}
       <h1 className={c.title}>Nosso Processo</h1>
 

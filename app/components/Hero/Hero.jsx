@@ -12,7 +12,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 export default function Hero() {
   return (
     <main className={c.cont}>
-      <div className={c.contLeft}>
+      <div className={c.contLeft} id='gobags'>
         <h2>GoBags</h2>
         <p>
           Fábrica, distribui e comercializa marcas próprias e licenciadas além

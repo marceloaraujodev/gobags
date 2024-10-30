@@ -1,0 +1,29 @@
+.cont{
+  padding: 100px 50px;
+}
+.items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.item{
+  position: relative;
+}
+.iconContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30px;
+}
+.roundedVideo{
+  border-radius: 50%;
+}

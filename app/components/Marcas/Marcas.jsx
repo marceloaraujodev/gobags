@@ -27,7 +27,7 @@ export default function Marcas({ setIsModalOpen, setContent }) {
   ];
 
   return (
-    <div className={c.container}>
+    <div className={c.container} id='marcas'>
       <div className={c.marcas}>
         {infos.map((info, index) => {
           const animationOverlay = useAnimationControls();

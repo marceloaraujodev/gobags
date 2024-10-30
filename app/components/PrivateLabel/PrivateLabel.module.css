@@ -4,6 +4,7 @@
   align-items: center;
   margin: 0 auto;
   padding: 100px 0;
+  background-color: rgb(241, 241, 241);
 }
 .cont p{
   max-height: 440px;
