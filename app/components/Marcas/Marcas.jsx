@@ -32,9 +32,9 @@ export default function Marcas({ setIsModalOpen, setContent }) {
   const textAnimation = [];
 
   for (let i = 0; i < infos.length; i++) {
-    animationOverlay.push(useAnimationControls());
-    imgBlurAnimation.push(useAnimationControls());
-    textAnimation.push(useAnimationControls());
+    animationOverlay.push(`useAnimationControls()`);
+    imgBlurAnimation.push(`useAnimationControls()`);
+    textAnimation.push(`useAnimationControls()`);
   }
 
   

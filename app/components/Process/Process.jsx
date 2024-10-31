@@ -104,9 +104,9 @@ export default function Process({ setIsModalOpen, setContent, setModalCategory, 
   const textAnimation = [];
 
   for (let i = 0; i < images.length; i++) {
-    overlayAnimation.push(useAnimationControls());
-    imgBlurAnimation.push(useAnimationControls());
-    textAnimation.push(useAnimationControls());
+    overlayAnimation.push(`useAnimationControls()`);
+    imgBlurAnimation.push(`useAnimationControls()`);
+    textAnimation.push(`useAnimationControls()`);
   }
 
   return (
