@@ -106,27 +106,31 @@ export default function Process({ setIsModalOpen, setContent, setModalCategory, 
   // const imgBlurAnimation = createAnimationControlsArray(images.length);
   // const textAnimation = createAnimationControlsArray(images.length);
 
-  const overlayAnimation = [
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-  ]
-  const imgBlurAnimation = [
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-  ]
-  const textAnimation = [
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-  ]
+  const overlayAnimation = images.map(() => useAnimationControls());
+  const imgBlurAnimation = images.map(() => useAnimationControls());
+  const textAnimation = images.map(() => useAnimationControls());
+
+  // const overlayAnimation = [
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  // ]
+  // const imgBlurAnimation = [
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  // ]
+  // const textAnimation = [
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  // ]
 
 
 
