@@ -1,7 +1,7 @@
 import { motion, useAnimationControls } from 'framer-motion';
 import c from './Marcas.module.css';
 
-export default function Marcas({ setIsModalOpen }) {
+export default function Marcas() {
 
   const infos = [
     {
@@ -95,7 +95,6 @@ export default function Marcas({ setIsModalOpen }) {
               key={index}
               onMouseEnter={handleHoverStart}
               onMouseLeave={handleHoverEnd}
-              onClick={() => setIsModalOpen(false)}
               transition={{ duration: 0.3 }}>
               <a href={info.href} target="_blank">
                 <motion.img
