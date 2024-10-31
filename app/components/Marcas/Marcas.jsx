@@ -1,7 +1,8 @@
 import { motion, useAnimationControls } from 'framer-motion';
 import c from './Marcas.module.css';
 
-export default function Marcas({ setIsModalOpen, setContent }) {
+export default function Marcas({ setIsModalOpen }) {
+
   const infos = [
     {
       href: 'https://www.instagram.com/anahickmannluxury/',
@@ -25,14 +26,17 @@ export default function Marcas({ setIsModalOpen, setContent }) {
         'Marca européia de alto luxo, a Attos tem seus produtos próprios produzidos pela Go Bags desde a fundação, em 2006. São centenas de ítens postos à prova nos mercados mais competitivos da moda de alto nível do mundo. Além da fabricação, a Go Bags oferecem esse mesmo know how de alto nível para as marcas no mercado nacional.',
     },
   ];
+  const animationControls = infos.map(() => useAnimationControls());
+  const imgBlurControls = infos.map(() => useAnimationControls());
+  const textControls = infos.map(() => useAnimationControls());
 
   return (
     <div className={c.container} id='marcas'>
       <div className={c.marcas}>
         {infos.map((info, index) => {
-          const animationOverlay = useAnimationControls();
-          const imgBlurAnimation = useAnimationControls();
-          const textAnimation = useAnimationControls();
+          const animationOverlay = animationControls[index];
+          const imgBlurAnimation = imgBlurControls[index];
+          const textAnimation = textControls[index];
           // active animation where you view the effects
           const handleHoverStart = () => {
             // individual animations
