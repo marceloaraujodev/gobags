@@ -16,11 +16,10 @@ export default function CarouselImgs() {
     <div className={c.cont}>
       <Swiper
         modules={[EffectFade, Navigation, Pagination, Autoplay]}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
-
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         spaceBetween={30}
         slidesPerView={1}
         effect={'fade'}

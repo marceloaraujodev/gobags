@@ -14,7 +14,6 @@ export default function Modal({ children, isOpen, onClose, modalCategory }) {
                 <span className={c.title}>
                   GoBags <span className={c.category}>{modalCategory}</span>
                 </span>
-
               {children}
             </div>
           </div>
