@@ -27,15 +27,16 @@ export default function Marcas({ setIsModalOpen, setContent }) {
     },
   ];
 
-  const animationOverlay = [];
-  const imgBlurAnimation = [];
-  const textAnimation = [];
 
-  for (let i = 0; i < infos.length; i++) {
-    animationOverlay.push(`useAnimationControls()`);
-    imgBlurAnimation.push(`useAnimationControls()`);
-    textAnimation.push(`useAnimationControls()`);
+  // return an array of hooks
+  const createAnimationControlsArray = (length) => {
+    return Array.from({length}, () => useAnimationControls())
   }
+
+  const animationOverlay = createAnimationControlsArray(infos.length);
+  const imgBlurAnimation = createAnimationControlsArray(infos.length);
+  const textAnimation = createAnimationControlsArray(infos.length);
+
 
   
 

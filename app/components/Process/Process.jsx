@@ -98,16 +98,15 @@ export default function Process({ setIsModalOpen, setContent, setModalCategory, 
     },
   ];
 
-
-  const overlayAnimation = [];
-  const imgBlurAnimation = [];
-  const textAnimation = [];
-
-  for (let i = 0; i < images.length; i++) {
-    overlayAnimation.push(`useAnimationControls()`);
-    imgBlurAnimation.push(`useAnimationControls()`);
-    textAnimation.push(`useAnimationControls()`);
+  const createAnimationControlsArray = (length) => {
+    return Array.from({length}, () => useAnimationControls())
   }
+
+  const overlayAnimation = createAnimationControlsArray(images.length);
+  const imgBlurAnimation = createAnimationControlsArray(images.length);
+  const textAnimation = createAnimationControlsArray(images.length);
+
+
 
   return (
     <div className={c.cont} id="process">
