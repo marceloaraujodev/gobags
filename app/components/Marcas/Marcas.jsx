@@ -27,7 +27,6 @@ export default function Marcas({ setIsModalOpen, setContent }) {
     },
   ];
 
-
   // return an array of hooks
   const createAnimationControlsArray = (length) => {
     return Array.from({length}, () => useAnimationControls())
@@ -37,8 +36,6 @@ export default function Marcas({ setIsModalOpen, setContent }) {
   const imgBlurAnimation = createAnimationControlsArray(infos.length);
   const textAnimation = createAnimationControlsArray(infos.length);
 
-
-  
 
   return (
     <div className={c.container} id='marcas'>
