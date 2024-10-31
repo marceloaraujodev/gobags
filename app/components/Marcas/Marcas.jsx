@@ -1,8 +1,8 @@
 import { motion, useAnimationControls } from 'framer-motion';
 import c from './Marcas.module.css';
 
-export default function Marcas() {
-
+export default function Marcas({ setIsModalOpen, setContent }) {
+  
   const infos = [
     {
       href: 'https://www.instagram.com/anahickmannluxury/',
@@ -26,21 +26,34 @@ export default function Marcas() {
         'Marca européia de alto luxo, a Attos tem seus produtos próprios produzidos pela Go Bags desde a fundação, em 2006. São centenas de ítens postos à prova nos mercados mais competitivos da moda de alto nível do mundo. Além da fabricação, a Go Bags oferecem esse mesmo know how de alto nível para as marcas no mercado nacional.',
     },
   ];
-  const animationControls = infos.map(() => useAnimationControls());
-  const imgBlurControls = infos.map(() => useAnimationControls());
-  const textControls = infos.map(() => useAnimationControls());
+
+  const animationOverlay = [
+    useAnimationControls(),
+    useAnimationControls(),
+    useAnimationControls(),
+  ];
+
+  const imgBlurAnimation = [
+    useAnimationControls(),
+    useAnimationControls(),
+    useAnimationControls(),
+  ];
+
+  const textAnimation = [
+    useAnimationControls(),
+    useAnimationControls(),
+    useAnimationControls(),
+  ];
 
   return (
     <div className={c.container} id='marcas'>
       <div className={c.marcas}>
         {infos.map((info, index) => {
-          const animationOverlay = animationControls[index];
-          const imgBlurAnimation = imgBlurControls[index];
-          const textAnimation = textControls[index];
+
           // active animation where you view the effects
-          const handleHoverStart = () => {
+          const handleHoverStart = (index) => {
             // individual animations
-            animationOverlay.start({
+            animationOverlay[index].start({
               y: '0%',
               opacity: 1,
               borderRadius: '20px',
@@ -50,7 +63,7 @@ export default function Marcas() {
                 ease: 'easeInOut',
               },
             });
-            imgBlurAnimation.start({
+            imgBlurAnimation[index].start({
               filter: 'blur(5px)',
               transition: {
                 duration: 0.5,
@@ -58,7 +71,7 @@ export default function Marcas() {
                 delay: 0.2,
               },
             });
-            textAnimation.start({
+            textAnimation[index].start({
               y: '0%',
               opacity: 1,
               transition: {
@@ -69,8 +82,8 @@ export default function Marcas() {
           };
 
           // Here you reset the animation to is default view
-          const handleHoverEnd = () => {
-            animationOverlay.start({
+          const handleHoverEnd = (index) => {
+            animationOverlay[index].start({
               y: '100%',
               opacity: 0,
               top: '100%',
@@ -80,7 +93,7 @@ export default function Marcas() {
                 ease: 'easeInOut',
               },
             });
-            imgBlurAnimation.start({
+            imgBlurAnimation[index].start({
               filter: 'blur(0px)',
               transition: {
                 duration: 0.5,
@@ -93,23 +106,26 @@ export default function Marcas() {
             <motion.div
               className={c.img}
               key={index}
-              onMouseEnter={handleHoverStart}
-              onMouseLeave={handleHoverEnd}
+              onMouseEnter={() => handleHoverStart(index)}
+              onMouseLeave={() => handleHoverEnd(index)}
+              onClick={() => setIsModalOpen(false)}
               transition={{ duration: 0.3 }}>
               <a href={info.href} target="_blank">
                 <motion.img
                   className={c.img}
-                  animate={imgBlurAnimation}
+                  animate={imgBlurAnimation[index]}
                   src={info.imgSrc}
                   alt="Marca 1"
                 />
                 {/* top layer effect */}
-                <motion.div className={c.effect} animate={animationOverlay}>
+                <motion.div 
+                className={c.effect} 
+                animate={animationOverlay[index]}>
                   {/* when active this will appear */}
                   <motion.div
                     className={c.text}
                     initial={{ opacity: 0 }}
-                    animate={textAnimation}>
+                    animate={textAnimation[index]}>
                     <p className={c.title}>{info.title}</p>
                     <p>{info.description}</p>
                   </motion.div>
