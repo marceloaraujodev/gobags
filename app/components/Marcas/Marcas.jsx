@@ -27,29 +27,29 @@ export default function Marcas({ setIsModalOpen, setContent }) {
     },
   ];
 
-  // const animationOverlay = [
-  //   useAnimationControls(),
-  //   useAnimationControls(),
-  //   useAnimationControls(),
-  // ];
+  const animationOverlay = [
+    useAnimationControls(),
+    useAnimationControls(),
+    useAnimationControls(),
+  ];
 
-  // const imgBlurAnimation = [
-  //   useAnimationControls(),
-  //   useAnimationControls(),
-  //   useAnimationControls(),
-  // ];
+  const imgBlurAnimation = [
+    useAnimationControls(),
+    useAnimationControls(),
+    useAnimationControls(),
+  ];
 
-  // const textAnimation = [
-  //   useAnimationControls(),
-  //   useAnimationControls(),
-  //   useAnimationControls(),
-  // ];
+  const textAnimation = [
+    useAnimationControls(),
+    useAnimationControls(),
+    useAnimationControls(),
+  ];
   
 
   return (
     <div className={c.container} id='marcas'>
       <div className={c.marcas}>
-        {/* {infos.map((info, index) => {
+        {infos.map((info, index) => {
 
           // active animation where you view the effects
           const handleHoverStart = (index) => {
@@ -134,7 +134,7 @@ export default function Marcas({ setIsModalOpen, setContent }) {
               </a>
             </motion.div>
           );
-        })} */}
+        })}
 
         <div className={c.rightBox}>
           <h2>Nossas Marcas</h2>
