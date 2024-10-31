@@ -27,15 +27,31 @@ export default function Marcas({ setIsModalOpen, setContent }) {
     },
   ];
 
-  // return an array of hooks
-  const createAnimationControlsArray = (length) => {
-    return Array.from({length}, () => useAnimationControls())
-  }
+  // // return an array of hooks
+  // const createAnimationControlsArray = (length) => {
+  //   return Array.from({length}, () => useAnimationControls())
+  // }
 
-  const animationOverlay = createAnimationControlsArray(infos.length);
-  const imgBlurAnimation = createAnimationControlsArray(infos.length);
-  const textAnimation = createAnimationControlsArray(infos.length);
+  // const animationOverlay = createAnimationControlsArray(infos.length);
+  // const imgBlurAnimation = createAnimationControlsArray(infos.length);
+  // const textAnimation = createAnimationControlsArray(infos.length);
 
+
+  const animationOverlay = [
+    useAnimationControls(),
+    useAnimationControls(),
+    useAnimationControls(),
+  ]
+  const imgBlurAnimation = [
+    useAnimationControls(),
+    useAnimationControls(),
+    useAnimationControls(),
+  ]
+  const textAnimation = [
+    useAnimationControls(),
+    useAnimationControls(),
+    useAnimationControls(),
+  ]
 
   return (
     <div className={c.container} id='marcas'>
