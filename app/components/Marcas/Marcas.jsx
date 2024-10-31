@@ -27,23 +27,23 @@ export default function Marcas({ setIsModalOpen, setContent }) {
     },
   ];
 
-  const animationOverlay = [
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-  ];
+  // const animationOverlay = [
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  // ];
 
-  const imgBlurAnimation = [
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-  ];
+  // const imgBlurAnimation = [
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  // ];
 
-  const textAnimation = [
-    useAnimationControls(),
-    useAnimationControls(),
-    useAnimationControls(),
-  ];
+  // const textAnimation = [
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  //   useAnimationControls(),
+  // ];
   
 
   return (
