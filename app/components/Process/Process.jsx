@@ -98,40 +98,50 @@ export default function Process({ setIsModalOpen, setContent, setModalCategory, 
     },
   ];
 
+
+  const overlayAnimation = [];
+  const imgBlurAnimation = [];
+  const textAnimation = [];
+
+  for (let i = 0; i < images.length; i++) {
+    overlayAnimation.push(useAnimationControls());
+    imgBlurAnimation.push(useAnimationControls());
+    textAnimation.push(useAnimationControls());
+  }
+
   return (
     <div className={c.cont} id="process">
-      {/* <Modal /> */}
+
       <h1 className={c.title}>Nosso Processo</h1>
 
-      {/* <div className={c.wrapper}>
+      <div className={c.wrapper}>
         <div className={c.imgCont}>
           {images.map((image, index) => {
-            // create separate controles for each image
-            const overlayAnimation = useAnimationControls();
-            const imgBlurAnimation = useAnimationControls();
-            const textAnimation = useAnimationControls();
-
             // create separate animations for each image
-            const handleHoverStart = () => {
-              imgBlurAnimation.start({ filter: "blur(5px)", opacity: 1 });
-              overlayAnimation.start({ y: "0%", opacity: 1 });
-              textAnimation.start({ opacity: 1 });
+            const handleHoverStart = (index) => {
+              imgBlurAnimation[index].start({ filter: "blur(5px)", opacity: 1 });
+              overlayAnimation[index].start({ y: "0%", opacity: 1 });
+              textAnimation[index].start({ opacity: 1 });
             };
 
-            const handleHoverEnd = () => {
-              textAnimation.start({ opacity: 0 });
-              imgBlurAnimation.start({ filter: "blur(0px)" });
-              overlayAnimation.start({ y: "100%", opacity: 0 });
+            const handleHoverEnd = (index) => {
+              textAnimation[index].start({ opacity: 0 });
+              imgBlurAnimation[index].start({ filter: "blur(0px)" });
+              overlayAnimation[index].start({ y: "100%", opacity: 0 });
             };
 
             return (
               // for a link wrappe the whole thing
-              <motion.div key={index} onMouseEnter={handleHoverStart} onMouseLeave={handleHoverEnd} className={c.img}>
+              <motion.div 
+               key={index}
+               onMouseEnter={() => handleHoverStart(index)} 
+               onMouseLeave={() => handleHoverEnd(index)}
+               className={c.img}>
                 <motion.img
                   src={image.src}
                   alt={`image grid ${index + 1}`}
                   initial={{ filter: "blur(0px)" }}
-                  animate={imgBlurAnimation}
+                  animate={imgBlurAnimation[index]}
                   transition={{ duration: 0.5 }}
                   exit={{ opacity: 0 }}
                   className={c.img}
@@ -141,7 +151,7 @@ export default function Process({ setIsModalOpen, setContent, setModalCategory, 
                   key={`${image.src}-overlay`}
                   className={c.effect}
                   initial={{ y: "100%", opacity: "0" }}
-                  animate={overlayAnimation}
+                  animate={overlayAnimation[index]}
                   transition={{ duration: 0.5 }}
                   exit={{ opacity: 0 }}
                   >
@@ -150,7 +160,7 @@ export default function Process({ setIsModalOpen, setContent, setModalCategory, 
                     key={`${image.src}-text`}
                     className={c.overlayText}
                     initial={{ opacity: 0 }}
-                    animate={textAnimation}
+                    animate={textAnimation[index]}
                     // transition={{ duration: 0.3, delay: 0.5 }} 
                     exit={{ opacity: 0 }}
                     onClick={() => {
@@ -189,7 +199,7 @@ export default function Process({ setIsModalOpen, setContent, setModalCategory, 
             </p>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
