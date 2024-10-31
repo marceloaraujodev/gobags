@@ -103,7 +103,7 @@ export default function Process({ setIsModalOpen, setContent, setModalCategory, 
       {/* <Modal /> */}
       <h1 className={c.title}>Nosso Processo</h1>
 
-      <div className={c.wrapper}>
+      {/* <div className={c.wrapper}>
         <div className={c.imgCont}>
           {images.map((image, index) => {
             // create separate controles for each image
@@ -189,7 +189,7 @@ export default function Process({ setIsModalOpen, setContent, setModalCategory, 
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
