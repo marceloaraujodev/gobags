@@ -37,7 +37,7 @@ export default function Nav() {
           initial={{ left: "-100%", opacity: "0", opacity: 0 }}
           animate={{ left: isMenuOpen ? "0px" : "-100vw", opacity: isMenuOpen ? 1 : 0 }}
           exit={{ left: isSmallScreen ? "-100vw" : "-350px", opacity: "0px" }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
           style={{
             position: "fixed",
             top: 0,

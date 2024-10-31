@@ -164,7 +164,7 @@ export default function Process({ setIsModalOpen, setContent, setModalCategory, 
                                 <img
                                   src={modalImage}
                                   alt={`image ${index + 1}`}
-                                  onClick={() => handleImageClick(image.modalImgs, imgIndex, image.modalImgsText[imgIndex])}
+                                  onClick={() => handleImageClick(image.modalImgs, imgIndex, image.modalImgsText)}
                                 />
                               </div>
                             );
