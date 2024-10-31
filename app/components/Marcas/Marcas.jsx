@@ -44,11 +44,12 @@ export default function Marcas({ setIsModalOpen, setContent }) {
     useAnimationControls(),
     useAnimationControls(),
   ];
+  
 
   return (
     <div className={c.container} id='marcas'>
       <div className={c.marcas}>
-        {infos.map((info, index) => {
+        {/* {infos.map((info, index) => {
 
           // active animation where you view the effects
           const handleHoverStart = (index) => {
@@ -117,11 +118,11 @@ export default function Marcas({ setIsModalOpen, setContent }) {
                   src={info.imgSrc}
                   alt="Marca 1"
                 />
-                {/* top layer effect */}
+              
                 <motion.div 
                 className={c.effect} 
                 animate={animationOverlay[index]}>
-                  {/* when active this will appear */}
+                 
                   <motion.div
                     className={c.text}
                     initial={{ opacity: 0 }}
@@ -133,7 +134,7 @@ export default function Marcas({ setIsModalOpen, setContent }) {
               </a>
             </motion.div>
           );
-        })}
+        })} */}
 
         <div className={c.rightBox}>
           <h2>Nossas Marcas</h2>
