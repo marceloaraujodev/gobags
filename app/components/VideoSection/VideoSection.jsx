@@ -44,7 +44,7 @@ export default function VideoSection() {
           <video
             ref={videoRef[0]}
             muted
-            controls={isVideoPlaying ? true : false}
+            controls={playingIndex === 0}
             src="https://video.wixstatic.com/video/113b92_ff87c096baf1408995c1596e4f5936a5/480p/mp4/file.mp4"
             playsInline
             preload="auto"
@@ -62,7 +62,7 @@ export default function VideoSection() {
             ref={videoRef[1]}
             muted
             src="https://video.wixstatic.com/video/113b92_16e42514afb04c34882f61b365c417c0/480p/mp4/file.mp4"
-            controls={isVideoPlaying ? true : false}
+            controls={playingIndex === 1}
             playsInline
             preload="auto"
             style={{ width: '300px', height: 'auto' }}
