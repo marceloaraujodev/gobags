@@ -43,6 +43,7 @@ export default function VideoSection() {
         <div className={c.item}>
           <video
             ref={videoRef[0]}
+            muted
             controls={isVideoPlaying ? true : false}
             src="https://video.wixstatic.com/video/113b92_ff87c096baf1408995c1596e4f5936a5/480p/mp4/file.mp4"
             playsInline
@@ -59,6 +60,7 @@ export default function VideoSection() {
         <div className={c.item}>
           <video
             ref={videoRef[1]}
+            muted
             src="https://video.wixstatic.com/video/113b92_16e42514afb04c34882f61b365c417c0/480p/mp4/file.mp4"
             controls={isVideoPlaying ? true : false}
             playsInline
