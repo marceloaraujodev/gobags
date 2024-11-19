@@ -39,29 +39,32 @@ export default function VideoSection() {
   return (
     <div className={c.cont} id="videos">
       <div className={c.items}>
-        {/* <div className={c.item}>
+ <div className={c.item}>
           <video
+            ref={videoRef[0]}
             className={c.roundedVideo}
-            playsInline={true}
-            autoPlay
-            loop
+            loop={true}
+            autoPlay={true}
             muted
+            playsInline
+            src="/video1.mp4"
+            poster="/poster-video1.jpg"
+            type="video/mp4"
             preload="auto"
-            style={{ width: '300px', height: 'auto' }}>
-            <source
-              src="/video1.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div> */}
+            style={{ width: '300px', height: '300px', objectFit: 'cover' }}
+            onClick={() => play(videoRef[0], canvasRef[0], 0)}
+          />
+
+        </div>
 
         <div className={c.item}>
           <video
             ref={videoRef[0]}
-            controls
+            // controls
             muted
             playsInline
             src="https://firebasestorage.googleapis.com/v0/b/charter-8fd79.appspot.com/o/video2.mp4?alt=media&token=a0a557ef-47f7-45b7-bf4d-80492a73e616"
+            poster="/poster-video2.jpg"
             type="video/mp4"
             preload="auto"
             style={{ width: '300px', height: '300px', objectFit: 'cover' }}
@@ -76,11 +79,12 @@ export default function VideoSection() {
           </div>
         </div>
 
-        {/* <div className={c.item}>
+        <div className={c.item}>
           <video
             ref={videoRef[1]}
             muted
             src="/video3.mp4"
+            poster='/poster-video3.jpg'
             type="video/mp4"
             controls={playingIndex === 1}
             playsInline={true}
@@ -92,7 +96,7 @@ export default function VideoSection() {
           }}>
             {playingIndex === 1 ? '' : <IoPlayCircleOutline size={80} />}
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
