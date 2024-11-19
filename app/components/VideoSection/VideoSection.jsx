@@ -58,13 +58,12 @@ export default function VideoSection() {
         <div className={c.item}>
           <video
             ref={videoRef[0]}
+            controls
             muted
             playsInline
-            webkit-playsinline="true"
-            x5-playsinline="true"
-            src="https://video.wixstatic.com/video/113b92_ff87c096baf1408995c1596e4f5936a5/480p/mp4/file.mp4"
+            src="https://firebasestorage.googleapis.com/v0/b/charter-8fd79.appspot.com/o/video2.mp4?alt=media&token=a0a557ef-47f7-45b7-bf4d-80492a73e616"
             type="video/mp4"
-            preload="auto"
+            preload="metadata"
             style={{ width: '300px', height: '300px', objectFit: 'cover' }}
             onClick={() => play(videoRef[0], canvasRef[0], 0)}
           />
@@ -76,6 +75,19 @@ export default function VideoSection() {
             {playingIndex === 0 ? '' : <IoPlayCircleOutline size={80} />}
           </div>
         </div>
+
+        <video
+          playsInline
+          muted
+          controls
+          preload="metadata"
+          >
+          <source
+            src="https://video.wixstatic.com/video/113b92_ff87c096baf1408995c1596e4f5936a5/480p/mp4/file.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
 
         {/* <div className={c.item}>
           <video
