@@ -73,8 +73,6 @@ export default function VideoSection() {
         <div className={c.item}>
           <video
             ref={videoRef[0]}
-            loop={true}
-            autoPlay={false}
             muted
             playsInline
             src="/video2.mp4"
@@ -98,8 +96,6 @@ export default function VideoSection() {
         <div className={c.item}>
           <video
             ref={videoRef[1]}
-            loop={true}
-            autoPlay={false}
             muted
             playsInline
             src="/video3.mp4"
