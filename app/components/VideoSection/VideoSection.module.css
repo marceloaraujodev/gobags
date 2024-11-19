@@ -1,18 +1,42 @@
-.cont{
+.cont {
   padding: 100px 50px;
 }
-.items{
+
+.items {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
 }
-.item{
+
+.item {
   position: relative;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  width: 300px; /* Adjust the width for each item */
+  height: 300px;
 }
-.iconContainer{
+
+/* Ensure the canvas is placed behind the video */
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Lower index to appear behind the video */
+  display: none; /* Hide canvas initially until the video is paused */
+  width: 100%;
+  height: 100%;
+}
+
+/* Video styling */
+.roundedVideo {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%; 
+}
+
+/* Play icon container */
+.iconContainer {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,10 +48,21 @@
   align-items: center;
   color: #fff;
   font-size: 30px;
+  z-index: 2; /* Make sure the play button stays above the canvas */
 }
+
+/* When video is paused, show the play icon */
 .item video.paused + .iconContainer {
   display: block;
 }
-.roundedVideo{
-  border-radius: 50%;
+
+/* Style for video controls to only show when a video is playing */
+.item video[controls] {
+  z-index: 2; /* Ensure controls are above the canvas */
+}
+
+/* Optionally, you can add some hover effects on the video item */
+.item:hover {
+  cursor: pointer;
+  opacity: 0.9;
 }
