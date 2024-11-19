@@ -10,7 +10,7 @@ export default function VideoSection() {
 
   const videoRef2 = useRef(null);
   const canvasRef2 = useRef(null);
-
+console.log(playingIndex);
   // Function to capture a video frame and draw it on the canvas
   function drawFrame(videoElement, canvasElement) {
     if (videoElement && canvasElement) {
@@ -86,13 +86,14 @@ export default function VideoSection() {
             // autoPlay
             controls={playingIndex === 0}
             src="/video2.mp4"
+            poster="/poster-video2.jpg"
             preload="auto"
             playsInline
             style={{ width: "300px", height: "auto" }}
           />
           <div
             className={c.iconContainer}
-            onClick={() => play(videoRef1, 1)}
+            onClick={() => play(videoRef1, canvasRef1, 0)}
           >
             {playingIndex === 0 ? "" : <IoPlayCircleOutline size={80} />}
           </div>
@@ -106,6 +107,7 @@ export default function VideoSection() {
             muted
             controls={playingIndex === 1}
             src="/video3.mp4"
+            poster="/poster-video3.jpg"
             preload="auto"
             playsInline
             style={{ width: "300px", height: "auto" }}
