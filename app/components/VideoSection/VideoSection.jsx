@@ -8,27 +8,63 @@ export default function VideoSection() {
   const videoRef = [useRef(null), useRef(null)]
 
 
-  function play(videoRef, index){
-    if(videoRef.current){
-      if(videoRef.current.paused){
-        videoRef.current.play();
-        setPlayingIndex(index);
-        setIsVideoPlaying(true);
-      }else{
-        videoRef.current.pause();
-        setPlayingIndex(null);
-        setIsVideoPlaying(false);
-      }
+  // function play(videoRef, index){
+  //   if(videoRef.current){
+  //     if(videoRef.current.paused){
+  //       videoRef.current.play();
+  //       setPlayingIndex(index);
+  //       setIsVideoPlaying(true);
+  //     }else{
+  //       videoRef.current.pause();
+  //       setPlayingIndex(null);
+  //       setIsVideoPlaying(false);
+  //     }
+  //   }
+  // }
+
+  function play(videoRef, index) {
+    const video = videoRef.current;
+    if (video) {
+        if (video.paused) {
+            video.play().catch(err => console.error(err));
+            setPlayingIndex(index);
+            setIsVideoPlaying(true);
+        } else {
+            video.pause();
+            setPlayingIndex(null);
+            setIsVideoPlaying(false);
+        }
     }
-  }
+}
 
   return (
     <div className={c.cont} id='videos'>
       <div className={c.items}>
-        <div className={c.item}>
+
+      <div className={c.item}>
+          <video
+            ref={videoRef[0]}
+            className={c.video}
+            playsInline
+            controls={playingIndex !== 0} // Show controls only when not playing manually
+            onClick={() => play(videoRef[0], 0)}
+            preload="metadata"
+          >
+            <source src="/video2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {!isVideoPlaying && playingIndex !== 0 && (
+            <IoPlayCircleOutline
+              className={c.playIcon}
+              onClick={() => play(videoRef[0], 0)}
+            />
+          )}
+        </div>
+
+        {/* <div className={c.item}>
           <video
             className={c.roundedVideo}
-            playsInline
+            playsInline={true}
             autoPlay
             loop
             muted
@@ -39,15 +75,16 @@ export default function VideoSection() {
               type="video/mp4"
             />
           </video>
-        </div>
-        <div className={c.item}>
+        </div> */}
+
+        {/* <div className={c.item}>
           <video
             ref={videoRef[0]}
             muted
-            controls={playingIndex === 0}
+            controls={isVideoPlaying? playingIndex === 0 : null}
             src="/video2.mp4"
             type="video/mp4"
-            playsInline
+            playsInline={true}
             preload="auto"
             style={{ width: '300px', height: '300px' }}
           />
@@ -56,16 +93,16 @@ export default function VideoSection() {
           }}>
             {playingIndex === 0 ? '' : <IoPlayCircleOutline size={80} />}
           </div>
-        </div>
+        </div> */}
 
-        <div className={c.item}>
+        {/* <div className={c.item}>
           <video
             ref={videoRef[1]}
             muted
-            src="video3.mp4"
+            src="/video3.mp4"
             type="video/mp4"
             controls={playingIndex === 1}
-            playsInline
+            playsInline={true}
             preload="auto"
             style={{ width: '300px', height: 'auto' }}
           />
@@ -74,7 +111,8 @@ export default function VideoSection() {
           }}>
             {playingIndex === 1 ? '' : <IoPlayCircleOutline size={80} />}
           </div>
-        </div>
+        </div> */}
+
       </div>
     </div>
   );

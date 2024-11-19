@@ -25,6 +25,9 @@
   color: #fff;
   font-size: 30px;
 }
+.item video.paused + .iconContainer {
+  display: block;
+}
 .roundedVideo{
   border-radius: 50%;
 }
