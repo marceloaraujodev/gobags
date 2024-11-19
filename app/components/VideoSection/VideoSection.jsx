@@ -5,8 +5,7 @@ import c from './VideoSection.module.css';
 export default function VideoSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [playingIndex, setPlayingIndex] = useState(null);
-  const videoRef = [useRef(null), useRef(null)]
-
+  const videoRef = [useRef(null), useRef(null)];
 
   // function play(videoRef, index){
   //   if(videoRef.current){
@@ -25,22 +24,21 @@ export default function VideoSection() {
   function play(videoRef, index) {
     const video = videoRef.current;
     if (video) {
-        if (video.paused) {
-            video.play().catch(err => console.error(err));
-            setPlayingIndex(index);
-            setIsVideoPlaying(true);
-        } else {
-            video.pause();
-            setPlayingIndex(null);
-            setIsVideoPlaying(false);
-        }
+      if (video.paused) {
+        video.play().catch((err) => console.error(err));
+        setPlayingIndex(index);
+        setIsVideoPlaying(true);
+      } else {
+        video.pause();
+        setPlayingIndex(null);
+        setIsVideoPlaying(false);
+      }
     }
-}
+  }
 
   return (
-    <div className={c.cont} id='videos'>
+    <div className={c.cont} id="videos">
       <div className={c.items}>
-
         {/* <div className={c.item}>
           <video
             className={c.roundedVideo}
@@ -60,20 +58,21 @@ export default function VideoSection() {
         <div className={c.item}>
           <video
             ref={videoRef[0]}
-            loop
-            autoplay
             muted
-            controls={isVideoPlaying? playingIndex === 0 : null}
+            playsInline
+            webkit-playsinline="true"
+            x5-playsinline="true"
             src="https://video.wixstatic.com/video/113b92_ff87c096baf1408995c1596e4f5936a5/480p/mp4/file.mp4"
             type="video/mp4"
-            playsInline
             preload="auto"
-            width='300px'
-            height='300px'
+            style={{ width: '300px', height: '300px', objectFit: 'cover' }}
+            onClick={() => play(videoRef[0], canvasRef[0], 0)}
           />
-          <div className={c.iconContainer} onClick={() => {
-            play(videoRef[0], 0);
-          }}>
+          <div
+            className={c.iconContainer}
+            onClick={() => {
+              play(videoRef[0], 0);
+            }}>
             {playingIndex === 0 ? '' : <IoPlayCircleOutline size={80} />}
           </div>
         </div>
@@ -95,7 +94,6 @@ export default function VideoSection() {
             {playingIndex === 1 ? '' : <IoPlayCircleOutline size={80} />}
           </div>
         </div> */}
-
       </div>
     </div>
   );
