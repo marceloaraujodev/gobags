@@ -10,6 +10,7 @@
 }
 .item{
   position: relative;
+  border: 1px solid red;
 }
 .iconContainer{
   position: absolute;

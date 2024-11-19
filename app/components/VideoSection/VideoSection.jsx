@@ -76,18 +76,20 @@ export default function VideoSection() {
           </div>
         </div>
 
-        <video
-          playsInline
-          muted
-          controls
-          preload="metadata"
-          >
-          <source
-            src="https://video.wixstatic.com/video/113b92_ff87c096baf1408995c1596e4f5936a5/480p/mp4/file.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <div className={c.item}>
+          <video
+            playsInline
+            muted
+            controls
+            preload="metadata"
+            >
+            <source
+              src="https://video.wixstatic.com/video/113b92_ff87c096baf1408995c1596e4f5936a5/480p/mp4/file.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
         {/* <div className={c.item}>
           <video
