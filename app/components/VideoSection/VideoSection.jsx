@@ -78,7 +78,7 @@ export default function VideoSection() {
             muted
             playsInline
             src="/video2.mp4"
-            // poster="/poster-video2.jpg"
+            poster="/poster-video2.jpg"
             type="video/mp4"
             preload="auto"
             style={{ width: '300px', height: '300px', objectFit: 'cover' }}
