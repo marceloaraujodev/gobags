@@ -35,7 +35,7 @@ export default function VideoSection() {
             preload="auto"
             style={{ width: '300px', height: 'auto' }}>
             <source
-              src="https://video.wixstatic.com/video/113b92_04956996717e4419bb985a29d1bcb596/360p/mp4/file.mp4"
+              src="/video1.mp4"
               type="video/mp4"
             />
           </video>
@@ -45,7 +45,8 @@ export default function VideoSection() {
             ref={videoRef[0]}
             muted
             controls={playingIndex === 0}
-            src="https://video.wixstatic.com/video/113b92_ff87c096baf1408995c1596e4f5936a5/480p/mp4/file.mp4"
+            src="/video2.mp4"
+            type="video/mp4"
             playsInline
             preload="auto"
             style={{ width: '300px', height: '300px' }}
@@ -61,7 +62,8 @@ export default function VideoSection() {
           <video
             ref={videoRef[1]}
             muted
-            src="https://video.wixstatic.com/video/113b92_16e42514afb04c34882f61b365c417c0/480p/mp4/file.mp4"
+            src="video3.mp4"
+            type="video/mp4"
             controls={playingIndex === 1}
             playsInline
             preload="auto"
