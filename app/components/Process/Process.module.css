@@ -62,18 +62,19 @@
   max-width: 326px;
   height: 100%;
   max-height: 326px;
-  font-weight: bold;
+  font-weight: 600;
   display: flex;
   align-items: center; 
   justify-content: center; 
   box-sizing: border-box;
-  flex-grow: 1;
-  line-height: 1; 
-  font-size: clamp(0.8rem, 2vw, 1.25rem);
-  line-height: 1.1; 
+  text-align: justify;
+  /* font-size: clamp(0.8rem, 2vw, 1.25rem); */
+  font-size: 23px;
+  line-height: 1.4rem; 
   overflow-wrap: break-word; 
   overflow: hidden;
   overflow-wrap: break-word;
+  color: gray;
 }
 
 
@@ -81,9 +82,9 @@
   .imgCont{
     grid-template-columns: repeat(1, 1fr);
   }
-  .text{
+  /* .text{
     font-size: 1.2rem;
-  }
+  } */
 }
 @media screen and (max-width: 375px) {
   .imgCont{
