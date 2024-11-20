@@ -14,7 +14,7 @@ export default function Hero() {
     <main className={c.cont}>
       <div className={c.contLeft} id='gobags'>
         <h2>GoBags</h2>
-        <p>
+        <p className={c.textBox}>
           Fábrica, distribui e comercializa marcas próprias e licenciadas além
           de dar suporte a marcas e designers no Brasil, Europa e Ásia
           transformando desenhos, idéias ou conceitos em bolsas e acessórios de

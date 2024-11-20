@@ -146,7 +146,7 @@ export default function Marcas({ setIsModalOpen, setContent }) {
         <div className={c.rightBox}>
           <h2>Nossas Marcas</h2>
           <p>
-            A GO Bags tem marcas próprias onde emprega todo o how-how e os
+            A GO Bags tem marcas próprias onde emprega todo o know-how e os
             serviços que ofereçe. Elas são a prova consistente de que o conceito
             funciona da concepção à entrega para o consumo final. Além de
             demonstrar o compromisso da Go Bags com o modelo do trabalho que

@@ -63,9 +63,14 @@
 }
 .rightBox p{
   padding: 25px 10px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: rgb(104, 104, 104);
+  text-align: justify;
+  word-spacing: 0.01em; /* Reduce word-spacing */
+  letter-spacing: -0.9px; 
+  text-align-last: left; 
+  hyphens: auto;
 }
 
 @media screen and (max-width: 768px) {
