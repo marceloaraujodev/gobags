@@ -36,11 +36,11 @@ export default function Home() {
 
       <div className={c.pageCont}>
         
-        {/* <div className={c.carouselCont}>
+        <div className={c.carouselCont}>
           <CarouselImgs />
-        </div> */}
+        </div>
 
-          {/* <Hero />
+          <Hero />
           <Process isModalOpen={isModalOpen} 
             setIsModalOpen={setIsModalOpen} 
             setContent={setContent}
@@ -50,7 +50,7 @@ export default function Home() {
             setFullScreenModalImagesText={setFullScreenModalImagesText} // Pass setter for text content
           />
           <Marcas />
-          <PrivateLabel /> */}
+          <PrivateLabel />
           <VideoSection />
       </div>
 
