@@ -10,7 +10,8 @@ export default function VideoSection() {
 
   const videoRef2 = useRef(null);
   const canvasRef2 = useRef(null);
-console.log(playingIndex);
+// console.log(playingIndex);
+
   // Function to capture a video frame and draw it on the canvas
   function drawFrame(videoElement, canvasElement) {
     if (videoElement && canvasElement) {
@@ -25,6 +26,7 @@ console.log(playingIndex);
   function play(videoRef, canvasRef, index) {
     const video = videoRef.current;
     const canvas = canvasRef.current;
+    // console.log(video);
 
     if (video) {
       if (video.paused) {
@@ -45,6 +47,7 @@ console.log(playingIndex);
   }
 
   useEffect(() => {
+
     // Draw the initial frame onto the canvas for each video when loaded
     if (videoRef1.current && canvasRef1.current) {
       videoRef1.current.addEventListener("loadeddata", () =>
@@ -83,12 +86,12 @@ console.log(playingIndex);
           <video
             ref={videoRef1}
             muted
-            // autoPlay
             controls={playingIndex === 0}
             src="/video2.mp4"
             poster="/poster-video2.jpg"
             preload="auto"
             playsInline
+            type="video/mp4"
             style={{ width: "300px", height: "auto" }}
           />
           <div
@@ -110,6 +113,7 @@ console.log(playingIndex);
             poster="/poster-video3.jpg"
             preload="auto"
             playsInline
+            type="video/mp4"
             style={{ width: "300px", height: "auto" }}
           />
           <div
