@@ -17,7 +17,7 @@
   margin-right: 15px;
   text-align: justify;
   text-align-last: left; 
-
+  word-spacing: -2px;
 }
 
 @media screen and (max-width: 768px) {
@@ -35,5 +35,11 @@
   .cont p{
     margin: 15px;
     margin-top: 45px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cont p{
+    padding: 20px;
+    width: 353px;
   }
 }

@@ -8,8 +8,10 @@
 }
 .contLeft{
   width: 35%;
-  max-width: 550px;
+  max-width: 407px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 20px;
   background-color: rgb(228, 228, 228);
@@ -52,7 +54,7 @@
   /* height: 800px; */
   /* cursor: pointer; */
 }
-@media screen and (max-width:904px){
+@media screen and (max-width:1015px){
   .cont{
     flex-direction: column;
     padding: 50px 15px;

@@ -72,10 +72,8 @@
   color: rgb(104, 104, 104);
   text-align: justify;
   text-align-last: left; 
-  width: 290px;
-  /* word-spacing: 0.01em;  */
-  /* letter-spacing: -0.5px;  */
-  /* hyphens: auto; */
+  
+  /* width: 290px; */
 }
 
 @media screen and (max-width: 768px) {
