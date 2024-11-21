@@ -23,15 +23,14 @@
 
 
 .textBox{
+  width: 270px;
   font-size: 1.2rem;
   line-height: 1.2;
   color: #666;
   text-align: justify;
-  word-spacing: 0.1em; /* Reduce word-spacing */
   letter-spacing: normal; 
-  text-align-last: left; /* Align the last line to the left to avoid extra space */
-  hyphens: auto;
-  letter-spacing: -0.09px; 
+  text-align-last: left;
+
 }
 .contLeft button{
   width: 200px;

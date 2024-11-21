@@ -56,7 +56,7 @@
   min-height: 100%;
 }
 .rightBox h2 {
-  font-size: 6rem;
+  font-size: 5.7rem;
   font-weight: bolder;
   color: rgb(77, 77, 77);
   line-height: .8;
@@ -67,10 +67,11 @@
   font-weight: bold;
   color: rgb(104, 104, 104);
   text-align: justify;
-  word-spacing: 0.01em; /* Reduce word-spacing */
-  letter-spacing: -0.9px; 
   text-align-last: left; 
-  hyphens: auto;
+  width: 290px;
+  /* word-spacing: 0.01em;  */
+  /* letter-spacing: -0.5px;  */
+  /* hyphens: auto; */
 }
 
 @media screen and (max-width: 768px) {
