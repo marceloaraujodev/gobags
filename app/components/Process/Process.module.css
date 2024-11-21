@@ -61,17 +61,18 @@
   width: 100%;
   max-width: 326px;
   height: 100%;
-  max-height: 326px;
+  max-height: 328px;
   font-weight: 600;
   display: flex;
   align-items: center; 
   justify-content: center; 
   box-sizing: border-box;
   text-align: justify;
-  font-size: 23px;
-  line-height: 1.4rem; 
-  overflow: hidden;
+  font-size: 21px;
+  line-height: 1.5rem; 
   color: gray;
+  /* border: 1px solid green; */
+  word-spacing: -5px;
 }
 
 
