@@ -17,15 +17,12 @@ export default function Footer() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log('click');
     const contactForm = {
       name,
       lastName,
       email,
       message,
     }
-
-    // console.log(contactForm);
 
     // change url for message route url
     const res = await axios.post('/api/contato', contactForm);

@@ -1,7 +1,7 @@
 import { motion, useAnimationControls } from 'framer-motion';
 import c from './Marcas.module.css';
 
-export default function Marcas({ setIsModalOpen, setContent }) {
+export default function Marcas({ setIsModalOpen }) {
   
   const infos = [
     {
@@ -26,16 +26,6 @@ export default function Marcas({ setIsModalOpen, setContent }) {
         'Marca européia de alto luxo, a Attos tem seus produtos próprios produzidos pela Go Bags desde a fundação, em 2006. São centenas de ítens postos à prova nos mercados mais competitivos da moda de alto nível do mundo. Além da fabricação, a Go Bags oferecem esse mesmo know how de alto nível para as marcas no mercado nacional.',
     },
   ];
-
-  // // return an array of hooks
-  // const createAnimationControlsArray = (length) => {
-  //   return Array.from({length}, () => useAnimationControls())
-  // }
-
-  // const animationOverlay = createAnimationControlsArray(infos.length);
-  // const imgBlurAnimation = createAnimationControlsArray(infos.length);
-  // const textAnimation = createAnimationControlsArray(infos.length);
-
 
   const animationOverlay = [
     useAnimationControls(),

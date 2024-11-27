@@ -25,7 +25,6 @@ export default function Nav() {
   }, []);
 
   function handleMenuClick() {
-    console.log("Menu clicked");
     setIsMenuOpen(!isMenuOpen);
   }
 

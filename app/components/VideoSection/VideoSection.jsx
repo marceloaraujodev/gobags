@@ -10,7 +10,6 @@ export default function VideoSection() {
 
   const videoRef2 = useRef(null);
   const canvasRef2 = useRef(null);
-// console.log(playingIndex);
 
   // Function to capture a video frame and draw it on the canvas
   function drawFrame(videoElement, canvasElement) {
@@ -26,7 +25,6 @@ export default function VideoSection() {
   function play(videoRef, canvasRef, index) {
     const video = videoRef.current;
     const canvas = canvasRef.current;
-    // console.log(video);
 
     if (video) {
       if (video.paused) {
