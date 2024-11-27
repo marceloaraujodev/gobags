@@ -5,21 +5,21 @@ export default function Marcas({ setIsModalOpen, setContent }) {
   
   const infos = [
     {
-      href: 'https://www.instagram.com/anahickmannluxury/',
+      href: 'https://www.anahickmannluxury.com.br',
       imgSrc: '/BannerAna.webp',
       title: 'Ana Hickmann',
       description:
         'Já tem produtos campeões em vendas em diversas categorias. O recente lançamento da assinatura das bolsas produzidas pela Go Bags trazem detalhes só encontrados em artigos de luxo: costuras decorativas digitais de alta precisão, bordas italianas, metais personalizados, couros mais duros e materiais nobres, para um mercado  emergente.',
     },
     {
-      href: 'https://www.dumond.com.br/bolsas',
+      href: 'https://www.dumond.com.br',
       imgSrc: '/BannerDrummond.webp',
       title: 'Bolsas Dummond',
       description:
         'Marca estabelecida no mercado de sapatos e acessórios femininos, a Dumond traz uma gama de produtos com posicionamento intermediário em franca expansão. A Go Bags desenvolve as bolsas da marca, que excedem as características do segmento e são uma entrega de valor excepcional para o consumidor final, nessa faixa de preço.',
     },
     {
-      href: 'https://www.instagram.com/attosmilanooficial/',
+      href: 'https://www.attosmilano.com.br',
       imgSrc: '/BannerAttos.webp',
       title: 'Attos Milano',
       description:
